@@ -1,0 +1,127 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > AverageCompare</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">seminar6.hw</a>
+</div>
+
+<h1>Coverage Summary for Class: AverageCompare (seminar6.hw)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">AverageCompare</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    66,7%
+  </span>
+  <span class="absValue">
+    (2/3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    88,9%
+  </span>
+  <span class="absValue">
+    (8/9)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package seminar6.hw;
+&nbsp;
+&nbsp;import java.util.Arrays;
+&nbsp;
+<b class="nc">&nbsp;public class AverageCompare {</b>
+&nbsp;
+&nbsp;     public static String compareArrays(long[] array1, long[] array2) {
+<b class="fc">&nbsp;         if (array1 == null || array2 == null){</b>
+<b class="fc">&nbsp;             return &quot;Array не должен быть null.&quot;;</b>
+&nbsp;         }
+<b class="fc">&nbsp;        if (caclAverage(array1) &gt; caclAverage(array2)){</b>
+<b class="fc">&nbsp;            return &quot;Первый список имеет большее среднее значение&quot;;</b>
+<b class="fc">&nbsp;        } else if (caclAverage(array1) &lt; caclAverage(array2)) {</b>
+<b class="fc">&nbsp;            return &quot;Второй список имеет большее среднее значение&quot;;</b>
+&nbsp;        } else {
+<b class="fc">&nbsp;            return &quot;Средние значения равны&quot;;</b>
+&nbsp;        }
+&nbsp;     }
+&nbsp;
+&nbsp;    private static double caclAverage(long[] array) {
+<b class="fc">&nbsp;        return Arrays.stream(array).average().getAsDouble();</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-11-09 16:43</div>
+</div>
+</body>
+</html>
